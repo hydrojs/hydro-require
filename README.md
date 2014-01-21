@@ -7,7 +7,7 @@ version](https://badge.fury.io/js/hydro-require.png)](http://badge.fury.io/js/hy
 
 ## Synopsis
 
-Require modules before executing the tests.
+Require modules and export them globally before executing the tests.
 
 ## Usage
 
@@ -16,14 +16,11 @@ Config:
 ```js
 hydro.set({
   plugins: ['hydro-require'],
-  require: ['should', 'what-not']
+  require: {
+    'assert': 'assert',
+    'should': 'should',
+  },
 });
-```
-
-CLI:
-
-```bash
-$ hydro --require should --require what-not
 ```
 
 ## Installation

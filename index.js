@@ -1,6 +1,6 @@
 /**
  * Auto require modules before running
- * the tests.
+ * the tests and make them global.
  *
  * @param {Object} hydro
  * @api public
@@ -9,17 +9,9 @@
 module.exports = function(hydro) {
   var requires = hydro.get('require');
   if (!requires) return;
-  if (!Array.isArray(requires)) requires = [requires];
 
-  requires.forEach(function(req) {
-    require(req);
-  });
-};
-
-/**
- * CLI flags.
- */
-
-module.exports.flags = {
-  '--require': 'require module'
+  for (var key in requires) {
+    if (!requires.hasOwnProperty(key)) return;
+    hydro.set('globals', key, require(requires[key]));
+  }
 };

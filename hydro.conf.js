@@ -10,16 +10,15 @@ module.exports = function(hydro) {
 
   hydro.set({
     plugins: [req],
-    require: ['should'],
+    require: {
+      'assert': 'assert'
+    },
     attach: global,
     proxies: {
       test: 'addTest'
     },
     suite: 'hydro-require',
     formatter: 'hydro-simple',
-    globals: {
-      assert: require('simple-assert')
-    },
     tests: [
       'test'
     ]
