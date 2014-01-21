@@ -1,13 +1,12 @@
 module.exports = function(config) {
+  var browsers = process.env.TRAVIS
+    ? [ 'PhantomJS' ]
+    : [ 'PhantomJS', 'Chrome', 'Firefox', 'Safari' ];
+
   config.set({
     frameworks: [ 'hydro' ],
     singleRun: true,
-    browsers: [
-      'PhantomJS',
-      'Chrome',
-      'Firefox',
-      'Safari'
-    ],
+    browsers: browsers,
     files: [
       'test/*.js'
     ],
