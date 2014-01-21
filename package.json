@@ -21,8 +21,7 @@
     "component": "~0.18.0",
     "hydro": "*",
     "simple-assert": "*",
-    "hydro-simple": "*",
-    "should": "~2.1.1"
+    "hydro-simple": "*"
   },
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT"

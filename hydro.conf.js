@@ -11,7 +11,7 @@ module.exports = function(hydro) {
   hydro.set({
     plugins: [req],
     require: {
-      'assert': 'assert'
+      'assert': 'simple-assert'
     },
     attach: global,
     proxies: {
