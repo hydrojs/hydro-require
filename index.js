@@ -11,7 +11,7 @@ module.exports = function(hydro) {
   if (!requires) return;
 
   for (var key in requires) {
-    if (!requires.hasOwnProperty(key)) return;
+    if (!requires.hasOwnProperty(key)) continue;
     hydro.set('globals', key, require(requires[key]));
   }
 };
