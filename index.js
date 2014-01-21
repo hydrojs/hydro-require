@@ -1,4 +1,14 @@
 /**
+ * Root.
+ */
+
+var browserRequire = typeof window !== 'undefined'
+  ? window.require
+  : null;
+
+var load = browserRequire ? browserRequire : require;
+
+/**
  * Auto require modules before running
  * the tests and make them global.
  *
@@ -12,6 +22,6 @@ module.exports = function(hydro) {
 
   for (var key in requires) {
     if (!requires.hasOwnProperty(key)) continue;
-    hydro.set('globals', key, require(requires[key]));
+    hydro.set('globals', key, load(requires[key]));
   }
 };

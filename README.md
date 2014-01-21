@@ -1,7 +1,6 @@
 [![NPM
 version](https://badge.fury.io/js/hydro-require.png)](http://badge.fury.io/js/hydro-require)
 [![Build Status](https://secure.travis-ci.org/hydrojs/hydro-require.png)](http://travis-ci.org/hydrojs/hydro-require)
-[![Coverage Status](https://coveralls.io/repos/hydrojs/hydro-require/badge.png?branch=master)](https://coveralls.io/r/hydrojs/hydro-require?branch=master)
 
 # hydro-require
 
@@ -32,20 +31,20 @@ npm install hydro-require
 ## Tests
 
 ```bash
-$ npm test
+$ make test
 ```
 
 Coverage:
 
 ```bash
-$ npm run coverage
+$ make test-cov
 ```
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2013 Veselin Todorov <hi@vesln.com>
+Copyright (c) 2013-2014 Veselin Todorov <hi@vesln.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -6,19 +6,16 @@
  */
 
 module.exports = function(hydro) {
-  var req = require('./index');
-
   hydro.set({
-    plugins: [req],
+    suite: 'hydro-require',
+    formatter: 'hydro-simple',
+    plugins: [ require('./index') ],
     require: {
       'assert': 'simple-assert'
     },
-    attach: global,
     proxies: {
       test: 'addTest'
     },
-    suite: 'hydro-require',
-    formatter: 'hydro-simple',
     tests: [
       'test'
     ]
